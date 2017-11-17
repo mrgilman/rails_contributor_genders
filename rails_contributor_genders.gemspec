@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
                         "lib/rails_contributor_genders.rb",
                         "lib/rails_contributor_genders/analyzer.rb",
                         "lib/rails_contributor_genders/importer.rb",
+                        "lib/rails_contributor_genders/version.rb",
                        ]
   spec.bindir        = "exe"
   spec.executables   = ["rails_contributor_genders"]
