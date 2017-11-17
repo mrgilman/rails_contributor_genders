@@ -1,38 +1,27 @@
 # RailsContributorGenders
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rails_contributor_genders`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem pulls the list of Rails contributor names from
+http://contributors.rubyonrails.org/ and analyzes the names for their gender
+using the [Gender Detector gem](https://github.com/bmuller/gender_detector).
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'rails_contributor_genders'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install gem using:
 
     $ gem install rails_contributor_genders
 
 ## Usage
 
-TODO: Write usage instructions here
+Analyze the full contributor list using:
 
-## Development
+    $ rails_contributor_genders
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+The above command takes an optional number argument, to see the gender
+distribution in the top x contributors, for example:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+    $ rails_contributor_genders 100
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/mrgilman/rails_contributor_genders.
+will return the genders of the top 100 contributors.
 
 ## License
 

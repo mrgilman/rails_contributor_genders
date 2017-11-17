@@ -14,17 +14,13 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/mrgilman/rails_contributor_genders"
   spec.license       = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
-
+  spec.files         = [
+                        "lib/rails_contributor_genders.rb",
+                        "lib/rails_contributor_genders/analyzer.rb",
+                        "lib/rails_contributor_genders/importer.rb",
+                       ]
   spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables   = ["rails_contributor_genders"]
   spec.require_paths = ["lib"]
 
   spec.add_dependency "nokogiri"

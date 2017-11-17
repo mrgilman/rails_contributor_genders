@@ -12,6 +12,13 @@ module RailsContributorGenders
               all_names
             end
 
-    Analyzer.new(names).results
+    results = Analyzer.new(names).results
+    results[:neutral] = results.delete(:andy)
+
+    results.each_pair do |gender, count|
+      puts "#{gender.to_s.capitalize.gsub("_", " ")}: #{count}"
+    end
+
+    nil
   end
 end
