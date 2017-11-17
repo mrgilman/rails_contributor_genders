@@ -1,4 +1,4 @@
-# RailsContributorGenders
+# Rails Contributor Genders
 
 This gem pulls the list of Rails contributor names from
 http://contributors.rubyonrails.org/ and analyzes the names for their gender
